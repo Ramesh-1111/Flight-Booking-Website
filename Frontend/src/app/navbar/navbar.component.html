@@ -1,0 +1,34 @@
+
+<div class="main-navbar">
+    <div class="container">
+        <div class="nav-brand-img">
+            <a href=""><img src="assets/images/logo.png" alt="Logo"></a>
+        </div>
+        <div class="collapse-navbarlink">
+            <ul class="navbar-navitem">
+                <li class="nav-itemcont">
+                    <a href="javascript:void(0)" routerLink="/">Home</a></li>
+                <li class="nav-itemcont">
+                    <a href="javascript:void(0)">categories</a></li>
+                <li class="nav-itemcont">
+                    <a href="javascript:void(0)">FAQ</a></li>
+                <li class="nav-itemcont">
+                    <a href="javascript:void(0)" routerLink="/about">About</a></li>
+                <li class="nav-itemcont">
+                    <a href="javascript:void(0)" routerLink="/my-trip">MyTrips</a></li>
+            </ul>
+        </div>
+        <div class="space" *ngIf="!Logged">            
+             <a href="javascript:void(0)" routerLink="/Authentication">            
+                <button class="btn btn_theme btn_md" type="submit">Login</button>
+             </a>
+        </div>
+
+        <div class="space" *ngIf="Logged">            
+                     
+            <button (click)="islogout()" class="btn btn_theme btn_md" type="submit" style="background-color: transparent !important;"><i class="fa fa-sign-out"></i>
+                Logout</button>
+           
+    </div>
+
+</div>

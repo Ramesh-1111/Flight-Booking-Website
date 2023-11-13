@@ -1,0 +1,30 @@
+ 
+ <div *ngIf="!isVerified; else verifiedTemplate" class="form">
+    <form (ngSubmit)="sendOTP()">
+        <a href="" routerLink="/"><i class="fa fa-close"></i></a>
+        <h2>Login</h2>
+        <p>or <span>Create account</span></p>
+        <div class="form-items">
+            <input type="text" [(ngModel)]="mobileNumber" name="mobileNumber" placeholder="Mobile Number" >
+            <p class="terms"  *ngIf="!otpSent">By clicking on Next, I accept the <b>Terms & Conditions & Privacy Policy</b></p>
+       </div>        
+        <div class="Loginbtn"  *ngIf="!otpSent">
+            <button type="submit" class="btn btn_theme btn_md">Send OTP</button>
+        </div>
+    </form>
+    <form *ngIf="otpSent" (ngSubmit)="verifyOTP()">
+        <div class="position-relative">
+         <h6 class="text-danger fs-6 lh-sm fw-medium"> Please enter the one time password <br> to verify your account</h6>
+              </div>
+        <div class="form-items">      
+             <input type="text" [(ngModel)]="otp" name="otp" placeholder="OTP">
+        </div>
+        <div class="Loginbtn">
+            <button type="submit" class="btn btn_theme btn_md">Verify OTP</button>
+        </div>  
+      </form>
+  </div>
+  <ng-template #verifiedTemplate>
+    <p>Mobile number {{ maskedMobileNumber }} verified successfully.</p>
+  </ng-template>
+<app-home></app-home>

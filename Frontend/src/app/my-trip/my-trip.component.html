@@ -1,0 +1,157 @@
+<app-navbar></app-navbar>
+<section>
+    <div class="container-fluid   ">
+      <div id="sky">
+        <div id="cloud1" class="cloud"></div>
+        <div id="cloud2" class="cloud"></div>
+        <div id="cloud3" class="cloud"></div>
+        <div id="cloud4" class="cloud"></div>
+        <div id="cloud5" class="cloud"></div>
+        <div id="cloud6" class="cloud"></div>
+        <div id="cloud7" class="cloud"></div>
+        <div id="aeroplane"></div>
+     </div>
+     </div>
+    
+    
+</section>
+
+<section id="Mytrip" class="section_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="sidebar ">
+                    <div class="sidebar-user">
+                        <img src="assets/images/user.png" alt="">
+                        <h3>Shalini</h3>
+                        <p>
+                            <a href="tel:+9161521512" class="nav-link link-dark">+918754398462</a>
+                        </p>
+                        <p>
+                            <a href="" class="nav-link link-dark">ramesh.cs21@bitsathy.ac.in</a>
+                        </p>
+                    </div>
+                    <div class="sidebar-menu d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
+                        <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 400px;">
+                            <a href="/" class="d-flex align-items-center mb-0 mb-md-0 me-md-auto link-dark text-decoration-none">
+                              </a>
+                            <hr>
+                            <ul class="nav nav-pills flex-column mb-auto">
+                              <li class="nav-item">
+                                <a href="#" class="nav-link link-dark" aria-current="page">
+                                    <i class="bi bi-house-door-fill pe-2"></i>
+                                  Home
+                                </a>
+                              </li>
+                              <li  class="nav-item">
+                                <a href="#" class="nav-link link-dark">
+                                    <i class="bi bi-speedometer2  "></i>              Dashboard
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="nav-link active">
+                                    <i class="bi bi-briefcase pe-2"></i>
+                                   Mytrip
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="nav-link link-dark">
+                                    <i class="bi bi-bell-fill pe-2"></i>Notifications                                  </a>
+                            </li>
+                              <li  class="nav-item">
+                                <a href="#" class="nav-link link-dark ">
+                                  <i class="bi bi-box-arrow-left pe-2"></i>Logout
+                                </a>
+                              </li>
+                              <li>
+                                 
+                              </li>
+                            </ul>
+                            <hr>
+                             
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="row gap-4">
+                      <div class="container-fluid quotes-container"> <p class="fs-4 p-3">
+                        &ldquo;With air travel, there is no distance, there is only time. &rdquo;
+                      </p></div>
+                       <div class="container-fluid">
+                         
+                          <div class="container-fluid">
+                            <ul class=" list-unstyled gap-3 d-flex user-select-none ">
+                              <li class="list-group-item d-flex justify-content-between align-items-center me-2 ">
+                                My Trip
+                                <span class="badge bg-primary rounded-pill ms-4">{{Bookings.length}}</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-center">
+                                A list item
+                                <span class="badge bg-primary rounded-pill ms-4 ">0</span>
+                              </li>
+                            </ul>
+                             
+                          </div>
+                   
+                        <hr>
+                       </div>
+                      <div class="container-fluid  " *ngIf="Bookings.length<=0">
+                        <div class="container-fluid   ">
+                          <div class="row  align-items-center p-5">
+                            <div class="col-lg-4">
+                              <img src="assets/images/no-bookings.png" alt="">
+                            </div>
+                            <div class="col-lg-8 ">
+                              <h4 class="mb-2">Looks empty, you've no upcoming bookings.</h4>
+                              <p class="mb-3">When you book a trip, you will see your itinerary here.</p>
+                              <a href="" routerLink="/"><button class="btn btn_theme btn_md Loginbtn rounded-4 ">PLAN TRIP</button></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container-fluid "*ngIf="Bookings.length>0">
+                        <div class="container-fluid mb-2   rounded-3 border text-dark"  style="height: 200px;" *ngFor="let booked of Bookings">
+                          <div class="row h-100 ">
+                          <div class="border-2 col-lg-8 d-flex   p-0">
+                            <div class="col-lg-4 d-flex align-items-center gap-1 p-3 size">
+                              <img src="{{booked.flightImg}}" alt="">
+                              <h4>{{booked.flightName}}</h4>
+                            </div>
+                            <div class="col-lg-4   d-flex align-items-center justify-content-center  ">
+                              <div class="container text-center">
+                                <p>From</p>
+                                <h4>{{booked.from}}</h4>
+                              <p>Departute Airport</p>
+                              </div>
+                            </div>
+                            <div class="col-lg-4 d-flex align-items-center justify-content-center  ">
+                              <div class="container text-center">
+                                <p>To</p>
+                                <h4 >{{booked.to}}</h4>
+                              <p>Arrival Airport</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-4 bg_color d-flex align-items-center ">
+                            <div class="container ">
+                              <h2 class="mb-3">{{booked.ticketAmount|currency:"INR"}}</h2>
+                             <div class="container-fluid">
+                              <button class="btn btn_theme bg-danger btn_md Loginbtn1 mb-2" (click)="removeBooking(booked._id)"><i class="bi bi-x  fs-4"></i>Cancel Trip</button>
+                              <button class="btn" (click)="downloadTicket()"> <i class="bi bi-file-earmark-arrow-down-fill fs-3 text-"></i>
+                              </button>
+                             </div>
+                            <p>*Cancel applicable on some conditions</p>
+                            
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+
+              </div>
+            </div>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

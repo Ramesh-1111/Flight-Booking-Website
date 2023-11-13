@@ -1,0 +1,405 @@
+<app-navbar></app-navbar>
+<section id="common_banner"></section>
+<section id="tour_booking_submission" class="section_padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="tou_booking_form_Wrapper">
+          <form
+            action="submit"
+            [formGroup]="BookingForm"
+            id="tour_bookking_form_item"
+            (ngSubmit)="AddBooking()"
+          >
+            <div class="booking_tour_form">
+              <h3 class="heading_theme">Passenger information</h3>
+              <div class="tour_booking_form_box">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control bg_input"
+                        placeholder="First name*"
+                        formControlName="fname"
+                        required
+                      />
+                      <span
+                        *ngIf="fname && fname.invalid && fname.touched"
+                        class="form-valid-text"
+                        style="color: red"
+                        >Firstname not empty and can't contain numbers</span
+                      >
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control bg_input"
+                        placeholder="Last name*"
+                        formControlName="lname"
+                        required
+                      />
+                      <span
+                        *ngIf="lname && lname.invalid && lname.touched"
+                        class="form-valid-text"
+                        style="color: red"
+                        >Last not empty and can't contain numbers</span
+                      >
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control bg_input"
+                        placeholder="Email address "
+                        formControlName="email"
+                      />
+                      <span
+                        *ngIf="email && email.invalid && email.touched"
+                        class="form-valid-text"
+                        style="color: red"
+                        >Email field is not a valid email address</span
+                      >
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control bg_input"
+                        placeholder="Mobile number*"
+                        formControlName="mobilenumber"
+                        required
+                      />
+                      <span
+                        *ngIf="
+                          mobilenumber &&
+                          mobilenumber.invalid &&
+                          mobilenumber.touched
+                        "
+                        class="form-valid-text"
+                        style="color: red"
+                        >Mobilenumber must be filled</span
+                      >
+                    </div>
+                  </div>
+
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <select class="form-control form-select bg_input">
+                        <option value="1">State</option>
+                        <option value="1">Chennai</option>
+                        <option value="1">Coimbatore</option>
+                        <option value="1">Sathy</option>
+                        <option value="1">Erode</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <select class="form-control form-select bg_input">
+                        <option value="1">Country</option>
+                        <option value="1">India</option>
+                        <option value="1">Russia</option>
+                        <option value="1">Singapore</option>
+                        <option value="1">Malaysia</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control bg_input"
+                        placeholder="Passport no."
+                        required
+                        formControlName="passportno"
+                      />
+                      <span
+                        *ngIf="
+                          passportno && passportno.invalid && passportno.touched
+                        "
+                        class="form-valid-text"
+                        style="color: red"
+                        >Passport No must be filled and it contains 4 Alphabet
+                        and 4 Numbers</span
+                      >
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control bg_input"
+                        placeholder="Visa no."
+                        required
+                        formControlName="visano"
+                      />
+                      <span
+                        *ngIf="visano && visano.invalid && visano.touched"
+                        class="form-valid-text"
+                        style="color: red"
+                        >VisaNo must filled and it contains 4 small letters and
+                        4 Numbers</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="booking_tour_form">
+              <h3 class="heading_theme">Payment method</h3>
+              <div class="tour_booking_form_box">
+                <div class="booking_payment_boxed">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="flexRadioDefault1"
+                      value="red"
+                    />
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Payment by card
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="flexRadioDefault2"
+                      value="green"
+                    />
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      Paypal
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="flexRadioDefault3"
+                      value="black"
+                    />
+                    <label class="form-check-label" for="flexRadioDefault3">
+                      Payoneer
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="flexRadioDefault4"
+                      value="white"
+                    />
+                    <label class="form-check-label" for="flexRadioDefault4">
+                      Cash on delivery
+                    </label>
+                  </div>
+                  <div class="payment_filed_wrapper">
+                    <div class="payment_card payment_toggle red">
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <input
+                              type="text"
+                              class="form-control bg_input"
+                              placeholder="Card number"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <input
+                              type="text"
+                              class="form-control bg_input"
+                              placeholder="Cardholder name"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <input
+                              type="text"
+                              class="form-control bg_input"
+                              placeholder="Date of expiry"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <input
+                              type="text"
+                              class="form-control bg_input"
+                              placeholder="Security code"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="paypal_payment payment_toggle green">
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <input
+                              type="text"
+                              class="form-control bg_input"
+                              placeholder="Email Address"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="payoneer_payment payment_toggle black">
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <input
+                              type="text"
+                              class="form-control bg_input"
+                              placeholder="Email Address"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="booking_tour_form_submit">
+              <div class="form-check write_spical_check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefaultf1"
+                  formControlName="termsandcondition"
+                />
+                <label class="form-check-label" for="flexCheckDefaultf1">
+                  I read and accept all <a href=" ">Terms and conditios</a>
+                </label>
+              </div>
+              <button
+                class="btn btn_theme btn_md"
+                type="submit"
+                [disabled]="BookingForm.invalid"
+              >
+                Pay now
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-4" *ngFor="let bookingdetails of Bookings">
+        <div class="tour_details_right_sidebar_wrapper">
+          <div class="tour_detail_right_sidebar">
+            <div class="tour_details_right_boxed">
+              <div class="tour_details_right_box_heading">
+                <h3>Flight - {{ bookingdetails.flightName }}</h3>
+              </div>
+              <div class="flight_sidebar_right">
+                <div class="flight_search_destination_sidebar">
+                  <img src="{{ bookingdetails.flightImg }}" alt="" />
+                </div>
+                <div class="flight_search_left_sidebar">
+                  <div class="flight_search_destination_sidebar">
+                    <p>From</p>
+                    <h3>{{ bookingdetails.from }}</h3>
+                    <h6>Airport</h6>
+                  </div>
+                </div>
+                <div class="flight_search_middel_sidebar">
+                  <div class="flight_right_arrow_sidebar">
+                    <img src="assets/images/right_arrow.png" alt="icon" />
+                    <h6>Non-stop</h6>
+                    <p>01h 05minute</p>
+                  </div>
+                  <div class="flight_search_destination_sidebar">
+                    <p>To</p>
+                    <h3>{{ bookingdetails.to }}</h3>
+                    <h6>Airport</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="tour_package_details_bar_list">
+                <h5>Package rules</h5>
+                <ul>
+                  <li>
+                    <i class="fas fa-circle"></i>Buffet breakfast as per the
+                    Itinerary
+                  </li>
+                  <li>
+                    <i class="fas fa-circle"></i>Visit eight villages showcasing
+                    Polynesian culture
+                  </li>
+                  <li>
+                    <i class="fas fa-circle"></i>Complimentary Camel safari,
+                    Bonfire,
+                  </li>
+                  <li>
+                    <i class="fas fa-circle"></i>All toll tax, parking, fuel,
+                    and driver allowances
+                  </li>
+                  <li>
+                    <i class="fas fa-circle"></i>Comfortable and hygienic
+                    vehicle
+                  </li>
+                </ul>
+              </div>
+              <div class="tour_package_details_bar_price">
+                <h5>Price</h5>
+                <div class="tour_package_bar_price">
+                  <h6>
+                    <del>
+                      {{
+                        bookingdetails.ticketAmount + 2500 | currency : "INR"
+                      }}
+                    </del>
+                  </h6>
+                  <h3>
+                    {{ bookingdetails.ticketAmount | currency : "INR"
+                    }}<sub> / Adult X 1</sub>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tour_detail_right_sidebar">
+            <div class="tour_details_right_boxed">
+              <div class="tour_details_right_box_heading">
+                <h3>Coupon code</h3>
+              </div>
+              <div class="coupon_code_area_booking">
+                <form action="#!">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control bg_input"
+                      placeholder="Enter coupon code"
+                    />
+                  </div>
+                  <div class="coupon_code_submit">
+                    <button class="btn btn_theme btn_md">Apply voucher</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container-fluid">
+  <div class="container"></div>
+</div>
+
+<app-footer></app-footer>

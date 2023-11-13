@@ -1,0 +1,65 @@
+.main-navbar{
+    position: absolute;
+    width: 100%;
+     z-index: 100;     
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 80px;
+}
+.collapse-navbarlink{
+    display: flex;
+ }
+.collapse-navbarlink{
+    flex: 0.4;
+}
+ 
+.collapse-navbarlink ul{
+   display: flex;    
+   list-style-type: none;
+   justify-content: space-evenly;
+}
+.collapse-navbarlink .navbar-navitem .nav-itemcont{
+    position: relative;
+    margin-left: 15px;
+    margin-right: 30px;
+}
+.collapse-navbarlink .navbar-navitem .nav-itemcont a::before{
+    content: "";
+    width: 0;
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    left: auto;
+    right: 0;
+    -webkit-transition: width .5s cubic-bezier(.25, .8, .25, 1) 0s;
+    transition: width .5s cubic-bezier(.25, .8, .25, 1) 0s;
+}
+.collapse-navbarlink .navbar-navitem .nav-itemcont a:hover::before,
+.collapse-navbarlink .navbar-navitem .nav-itemcont a:focus::before{
+    width: 100%;
+    left: 0;
+    right: auto;
+}
+.collapse-navbarlink ul li a{
+    text-decoration: none;
+    color: #fff;
+font-size: 16px;
+    font-family:  poppins;
+    font-weight: 300;
+}
+.nav-brand-img a img{
+     
+    color: #fff;
+}
+.logout-btn{
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease-in-out 0.1s;
+    transition: all 0.3s ease-in-out 0.1s;
+    outline: 0 !important;
+    color: #8B3EEA;
+    font-size: 25px;
+}

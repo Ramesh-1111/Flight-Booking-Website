@@ -1,0 +1,446 @@
+.section_padding {
+  padding: 100px 0 0 0;
+}
+/* --Common Banner-- */
+#common_banner {
+  background-image: url("https://andit.co/projects/html/and-tour/demo/assets/img/banner/common-banner.png");
+  padding: 200px 0 130px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.common_bannner_text {
+  text-align: center;
+}
+
+.common_bannner_text h2 {
+  color: var(--white-color);
+  font-weight: 400;
+}
+
+.common_bannner_text ul {
+  padding-top: 20px;
+}
+
+.common_bannner_text ul li {
+  display: inline-block;
+  color: var(--white-color);
+  padding-left: 7px;
+}
+
+.common_bannner_text ul li:first-child {
+  padding-left: 0px;
+}
+
+.common_bannner_text ul li span {
+  padding-right: 5px;
+}
+
+.common_bannner_text ul li span i {
+  color: var(--white-color);
+  font-size: 7px;
+  position: relative;
+  top: -2px;
+  left: -3px;
+}
+
+.common_bannner_text ul li a {
+  color: #ffffff91;
+}
+
+.common_bannner_text ul li a {
+  color: #ffffff91;
+}
+
+.common_bannner_text ul li a:hover {
+  color: var(--main-color);
+}
+
+/* --Search Form-- */
+#theme_search_form_tour {
+  margin-top: -85px;
+}
+
+.pagination_area .page-link {
+  color: var(--main-color);
+  border-radius: 5px;
+  padding: 2px 8px;
+  font-size: 14px;
+}
+
+.pagination_area .page-link:hover {
+  z-index: 2;
+  color: var(--white-color);
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+.pagination_area .page-link:focus {
+  z-index: 2;
+  color: var(--white-color);
+  background-color: var(--main-color);
+  outline: none;
+  box-shadow: none;
+}
+
+.pagination_area .page-item {
+  margin: 0 6px;
+}
+
+.pagination_area .pagination {
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.left_side_search_boxed {
+  background: #ffffff;
+  border: 1px solid #00000030;
+  border-radius: 6px;
+  padding: 20px 15px;
+  margin-bottom: 30px;
+}
+
+.left_side_search_heading h5 {
+  border-bottom: 1px solid #00000030;
+  padding-bottom: 7px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.filter-price {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.apply {
+  border: none;
+  background: transparent;
+  padding: 0;
+  color: var(--main-color);
+  font-weight: 500;
+}
+
+.filter-price-text {
+  padding-bottom: 20px;
+}
+
+.noUi-horizontal .noUi-tooltip {
+  margin-top: 13px;
+  font-size: 15px;
+}
+
+html:not([dir="rtl"]) .noUi-horizontal .noUi-handle.noUi-handle-upper {
+  right: -4px;
+  top: 4px;
+}
+
+html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
+  right: -13px;
+  top: 4px;
+}
+
+.noUi-horizontal .noUi-handle {
+  width: 15px;
+  height: 15px;
+}
+
+.noUi-connect {
+  background: var(--main-color);
+}
+
+.review_star {
+  padding-top: 10px;
+}
+
+.review_star .form-check {
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+.color_theme {
+  color: var(--main-color);
+}
+
+.color_asse {
+  color: #dddddd;
+}
+
+.form-check-label {
+  width: 100%;
+}
+
+.tour_search_type {
+  padding-top: 10px;
+}
+
+.tour_search_type .form-check {
+  padding-top: 15px;
+}
+
+.area_flex_one {
+  display: flex;
+  justify-content: space-between;
+}
+
+.area_flex_one span {
+  color: var(--black-color);
+  font-weight: 500;
+}
+.tour_detail_right_sidebar {
+  margin-bottom: 30px;
+}
+.tour_details_right_boxed {
+  background: #ffffff;
+  box-shadow: -4px -5px 14px rgba(0, 0, 0, 0.08),
+    5px 8px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  padding: 25px 20px 35px 20px;
+}
+
+.first_child_padding_none ul li:first-child {
+  padding-top: 0;
+}
+
+.tour_details_right_box_heading h3 {
+  font-weight: 500;
+  font-size: 22px;
+  border-bottom: 1px solid var(--main-color);
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.valid_date_area_one h5 {
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+
+.tour_package_details_bar_list {
+  padding-top: 20px;
+}
+
+.tour_package_details_bar_list h5 {
+  font-weight: 500;
+  border-bottom: 1px solid var(--main-color);
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.tour_package_details_bar_list ul li {
+  padding-top: 15px;
+  color: var(--paragraph-color);
+  display: flex;
+  align-items: center;
+}
+
+.tour_package_details_bar_list ul li i {
+  color: var(--black-color);
+  font-size: 6px;
+  padding-right: 7px;
+}
+
+.tour_package_details_bar_price {
+  padding-top: 20px;
+}
+
+.tour_package_details_bar_price h5 {
+  font-weight: 500;
+  border-bottom: 1px solid var(--main-color);
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.tour_package_bar_price {
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.tour_package_bar_price h6 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.tour_package_bar_price h3 {
+  padding-left: 10px;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--main-color);
+}
+
+.tour_package_bar_price h3 sub {
+  color: var(--paragraph-color);
+  font-weight: 400;
+  bottom: 0;
+  font-size: 14px;
+}
+
+.flight_sidebar_right {
+  padding-top: 20px;
+  display: flex;
+}
+
+.flight_right_arrow_sidebar {
+  text-align: center;
+  padding: 0 22px;
+}
+
+.flight_right_arrow_sidebar img {
+  width: 40px;
+}
+
+.flight_right_arrow_sidebar h6 {
+  font-size: 10px;
+}
+
+.flight_right_arrow_sidebar p {
+  font-size: 10px;
+  line-height: 13px;
+}
+
+.flight_search_destination_sidebar p {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--black-color);
+}
+
+.flight_search_destination_sidebar h3 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.flight_search_destination_sidebar h6 {
+  font-size: 10px;
+  padding-top: 3px;
+  padding-left: 35px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100px;
+}
+
+.flight_search_middel_sidebar {
+  display: flex;
+}
+
+.tour_details_boxed {
+  background: #ffffff;
+  box-shadow: -4px -5px 14px rgb(0 0 0 / 8%), 5px 8px 16px rgb(0 0 0 / 8%);
+  border-radius: 10px;
+  padding: 20px 20px;
+  margin-top: 30px;
+}
+
+.heading_theme {
+  border-bottom: 1px solid var(--main-color);
+  padding-bottom: 10px;
+  display: inline-block;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+/* =========================
+    Top Destinations Page
+=========================*/
+.payment_toggle {
+  display: none;
+}
+
+#payment_checked .form-check-label {
+  width: 100%;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 13px;
+  cursor: pointer;
+}
+
+.payment_card,
+.paypal_payment,
+.payoneer_payment,
+.cash_payment {
+  padding-top: 15px;
+}
+
+.payment_card .form-group {
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+#payment_checked .form-check:last-child .form-check-label {
+  margin-bottom: 0;
+}
+
+.form-control {
+  height: 55px;
+  border: 2px dashed #dddddd75;
+  padding: 10px 22px;
+  font-size: 16px;
+}
+
+.bg_input {
+  background-color: #f3f6fd;
+}
+
+.form-control:focus {
+  color: var(--heading-color);
+  background-color: #fff;
+  border: 2px solid var(--main-color);
+  outline: none;
+  box-shadow: none;
+}
+
+.tour_booking_form_box {
+  background: #ffffff;
+  box-shadow: -4px -5px 14px rgb(0 0 0 / 8%), 5px 8px 16px rgb(0 0 0 / 8%);
+  border-radius: 10px;
+  padding: 20px 20px 20px 20px;
+}
+
+#tour_bookking_form_item .form-group {
+  margin-bottom: 30px;
+}
+
+#tour_bookking_form_item {
+  padding-top: 25px;
+}
+
+.booking_tour_form {
+  margin-bottom: 30px;
+}
+
+.booking_tour_form_submit a {
+  margin-top: 15px;
+}
+
+.coupon_code_area_booking {
+  padding-top: 30px;
+}
+
+.coupon_code_submit {
+  padding-top: 20px;
+}
+
+.coupon_add_area {
+  padding-top: 15px;
+  border-bottom: 1px solid #dadada;
+  padding-bottom: 15px;
+}
+
+.coupon_add_area h6 {
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  font-size: 18px;
+}
+.form-valid-text {
+  color: red;
+  font-size: 12px;
+  padding: 10px;
+}
+button:disabled {
+  border: 2px solid var(--main-color);
+}
