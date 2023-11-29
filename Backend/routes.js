@@ -4,8 +4,8 @@ const UserController = require("./userController");
 const internationaldetails = require("./InterModel");
 const Authentication = require("./AuthModel");
 const twilio = require("twilio");
-const accountSid = "ACe66f3b2de4aa508b18d549d3b38208ca";
-const authToken = "283f1d43577e3864ed848979027a74db";
+const accountSid = "AC5353c44720e51dfacdcf2c56639f76bf";
+const authToken = "12f8e65f33ef5fa5a80e4262ab75fe23";
 const client = twilio(accountSid, authToken);
 router.post("/users", UserController.createUser);
 router.get("/users/getAll", UserController.getUsers);
@@ -137,7 +137,7 @@ async function sendOTPviaSMS(mobileNumber, otp) {
   try {
     await client.messages.create({
       body: `Your OTP is: ${otp}`,
-      from: "+13613015193",
+      from: "+12055709123",
       to: mobileNumber,
     });
   } catch (error) {

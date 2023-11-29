@@ -53,8 +53,6 @@ export class HomeComponent implements OnInit {
       });
   }
   addBooking(details: any) {
-    console.log(details._id);
-
     const navigationExtras: NavigationExtras = {
       state: {
         myObject: details,
